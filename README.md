@@ -43,19 +43,31 @@ A faithful reimplementation of the **Chrome offline T-Rex Runner** game as a cro
 
 ## 📦 安装 / Install
 
-前往仓库的 [Releases 页面](https://github.com/looeton/dino-desktop/releases) 下载对应平台安装包。
+前往仓库的 [Releases 页面](https://github.com/looeton/dino-desktop/releases/latest) 下载对应平台安装包。
 
-- **Windows**：`Dino Runner-1.0.0.exe`（NSIS 安装器）
-- **macOS**：`Dino Runner-1.0.0.dmg`
-- **Linux**：`Dino Runner-1.0.0.AppImage` 或 `.deb`
+| 平台 | 文件 | 说明 |
+|---|---|---|
+| **Windows** x64 | `Dino-Runner-Setup-1.0.0.exe` | NSIS 安装器，可自选安装目录 |
+| **macOS** Apple Silicon | `Dino-Runner-1.0.0-arm64.dmg` | M 系列芯片 |
+| **macOS** Intel | `Dino-Runner-1.0.0.dmg` | x86_64 |
+| **Linux** | `Dino-Runner-1.0.0.AppImage` | 免安装：`chmod +x` 后直接运行 |
+| **Linux** Debian/Ubuntu | `dino-desktop_1.0.0_amd64.deb` | `sudo apt install ./dino-desktop_1.0.0_amd64.deb` |
+
+每个安装包的 SHA-256 校验值可在 Release 页面查到。
 
 > 仓库地址：[https://github.com/looeton/dino-desktop](https://github.com/looeton/dino-desktop)
 
-Go to [Releases](https://github.com/looeton/dino-desktop/releases) and grab the installer for your platform:
+Go to [Releases](https://github.com/looeton/dino-desktop/releases/latest) and grab the installer for your platform:
 
-- **Windows**: `Dino Runner-1.0.0.exe` (NSIS installer)
-- **macOS**: `Dino Runner-1.0.0.dmg`
-- **Linux**: `Dino Runner-1.0.0.AppImage` or `.deb`
+| Platform | File | Notes |
+|---|---|---|
+| **Windows** x64 | `Dino-Runner-Setup-1.0.0.exe` | NSIS installer, custom install dir supported |
+| **macOS** Apple Silicon | `Dino-Runner-1.0.0-arm64.dmg` | M-series chips |
+| **macOS** Intel | `Dino-Runner-1.0.0.dmg` | x86_64 |
+| **Linux** | `Dino-Runner-1.0.0.AppImage` | Portable: `chmod +x` and run |
+| **Linux** Debian/Ubuntu | `dino-desktop_1.0.0_amd64.deb` | `sudo apt install ./dino-desktop_1.0.0_amd64.deb` |
+
+SHA-256 checksums for every asset are listed on the Release page.
 
 ---
 
