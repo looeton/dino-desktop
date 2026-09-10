@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Chrome 离线恐龙跑酷游戏的跨平台桌面复刻版 / Offline T-Rex Runner game as a cross-platform desktop app",
   "main": "main.js",
-  "author": "looeton",
+  "author": {
+    "name": "looeton",
+    "email": "looeton@users.noreply.github.com"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -51,7 +54,15 @@
       "icon": "build/icon.ico"
     },
     "mac": {
-      "target": "dmg",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
       "icon": "build/icon.icns",
       "identity": null,
       "hardenedRuntime": false,
