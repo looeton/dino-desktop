@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="LHI2tsjAFI4ysqeTDGguei">
+<head data-page-node-id="5XI8TXjnzsZRpsDQiRFbyf">
+  <meta charset="UTF-8" data-page-node-id="zFLe2TY4dGHFiNpIhZOQi3" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'" data-page-node-id="tLFPvmRzefRLHNutfcHZHM" />
+  <title>Dino Runner</title>
+  <link rel="stylesheet" href="css/style.css" data-page-node-id="PXxv2WQuAq8AuhOGKIqGJX" />
+</head>
+<body data-page-node-id="XeDfT7xY5DDUJXGO73rUt5">
+  <div class="stage" data-page-node-id="PYBcwoaJCwGOagYig4uNi1">
+    <canvas id="game-canvas" width="960" height="300" data-page-node-id="jPddmlkBLtJxU0JSZxAYq0"></canvas>
+  </div>
+  <footer class="statusbar" data-page-node-id="cAj2BNDEiJzrpOn9XxtW28">
+    <span id="app-info" data-page-node-id="BiB4tTUzvhzlsxEubbAeBR">Dino Runner</span>
+    <span class="hint" data-page-node-id="F617YuDA2vLfnQudIQDOHC">空格/↑ 跳跃 · ↓ 下蹲 · P 暂停 · M 静音 · R 重开</span>
+  </footer>
+
+  <!-- 依赖顺序：数据 → 实体 → 渲染 → 音效 → 存档 → 输入 → 主逻辑 -->
+  <script src="js/sprites.js"></script>
+  <script src="js/entities.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/game.js"></script>
+  <script>
+    // 底部状态栏展示运行时版本信息（来自 preload 暴露的桥）
+    const info = window.dinoBridge && window.dinoBridge.versions
+      ? window.dinoBridge.versions
+      : null;
+    document.getElementById('app-info').textContent = info
+      ? `Dino Runner · Electron ${info.electron} · Node ${info.node}`
+      : 'Dino Runner';
+  </script>
+</body>
+</html>
