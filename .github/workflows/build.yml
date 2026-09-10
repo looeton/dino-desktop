@@ -7,6 +7,10 @@ on:
       - 'v*'
   workflow_dispatch:
 
+# 关键：默认的 GITHUB_TOKEN 只有读权限，electron-builder 创建 Release 会 403
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build on ${{ matrix.os }}
@@ -36,7 +40,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run dist -- --publish always
 
+      # 兜底：即使发布到 Release 失败，构建产物仍可从 Actions 页面下载
       - name: Upload artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: dino-runner-${{ matrix.os }}
